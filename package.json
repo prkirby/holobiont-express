@@ -5,7 +5,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "prod": "gulp build --production && node ./bin/www"
+    "prod": "gulp build --production && forever start ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
