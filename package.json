@@ -8,17 +8,18 @@
     "prod": "gulp build --production && forever start ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "morgan": "~1.9.0",
-    "twig": "~0.10.3",
-    "axios": "^0.18.0",
     "dotenv": "^6.1.0",
+    "express": "~4.16.0",
     "foundation-sites": "~6.4.1",
     "http-errors": "~1.6.2",
     "jquery": "^3.2.1",
+    "morgan": "~1.9.0",
     "motion-ui": "^2.0.3",
+    "socket.io": "^2.2.0",
+    "twig": "~0.10.3",
     "what-input": "^5.1.2"
   },
   "devDependencies": {
