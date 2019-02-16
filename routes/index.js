@@ -12,4 +12,9 @@ router.post("/stop", (req, res, next) => {
   res.redirect("/");
 });
 
+router.post("/start", (req, res, next) => {
+  socket.start(Math.random());
+  res.redirect("/");
+});
+
 module.exports = router;

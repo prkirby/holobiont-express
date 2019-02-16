@@ -1,16 +1,29 @@
 const socketio = require("socket.io");
-let io;
 
-module.exports.listen = function(server) {
-  io = socketio.listen(server);
+class Socket {
+  constructor() {
+    this.io;
+  }
 
-  io.on("connection", () => {
-    console.log("connected!");
-  });
-};
+  listen(server) {
+    this.io = socketio.listen(server);
 
-module.exports.stop = function(data) {
-  console.log("sending some data");
-  console.log(data);
-  io.emit("stop", { data: data });
-};
+    this.io.on("connection", () => {
+      console.log("A client connected");
+    });
+  }
+
+  stop(data) {
+    console.log("sending stop data of: " + data);
+    this.io.emit("stop", { data: data });
+  }
+
+  start(data) {
+    console.log("sending start data of: " + data);
+    this.io.emit("start", { data: data });
+  }
+}
+
+// const socket =
+
+module.exports = new Socket();
