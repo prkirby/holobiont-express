@@ -8,12 +8,17 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/stop", (req, res, next) => {
-  socket.stop(Math.random());
+  socket.stop();
   res.redirect("/");
 });
 
 router.post("/start", (req, res, next) => {
-  socket.start(Math.random());
+  socket.start();
+  res.redirect("/");
+});
+
+router.post("/reset", (req, res, next) => {
+  socket.reset();
   res.redirect("/");
 });
 

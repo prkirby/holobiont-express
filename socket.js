@@ -13,14 +13,16 @@ class Socket {
     });
   }
 
-  stop(data) {
-    console.log("sending stop data of: " + data);
-    this.io.emit("stop", { data: data });
+  stop() {
+    this.io.emit("stop");
   }
 
-  start(data) {
-    console.log("sending start data of: " + data);
-    this.io.emit("start", { data: data });
+  start() {
+    this.io.emit("start");
+  }
+
+  reset() {
+    this.io.emit("reset");
   }
 }
 
